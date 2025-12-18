@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>自己紹介 - Hiroki Uematsu</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+<header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#activity">活動内容</a></li>
+            <li><a href="#results">活動成果</a></li>
+            <li><a href="#photos">活動写真</a></li>
+            <li><a href="research.html" target="_blank">経歴・スキル編</a></li>
+            <li><a href="https://www.ls.toyaku.ac.jp/~bioinfo/index.html" target="_blank">所属研究室公式</a></li>
+        </ul>
+    </nav>
+</header>
+
+<h1>
+  Hiroki Uematsu の Profiles  <span class="subtitle-image">
+    <img src="hero.jpg" alt="Tokyo University of Pharmacy and Life Sciences">
+  </span>
+</h1>
+
+<h2 class="name">所属サークル(生協組織部)編</h2>
+
+<div class="contents">
+    <section id="activity">
+        <h2>1．担当・生協組織部の活動</h2>
+        <div class="activity-box">
+            <ul class="activity-list">
+                <li>総代／購買委員会  
+                <span class="role">
+                <strong>（2024年〜現在：総会運営管理者 ／ 2024年度：委員会長）
+                </strong></span>
+                </li>
+                <li>平和／環境委員会</li>
+                <li>安心安全／広報宣伝委員会</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="results">
+        <h2>2．総代・購買委員会での前期活動と成果</h2>
+            <div class="result-card">
+        <p class="section-title">＜総代委員会＞</p>
+        〇総代募集施策
+        <ul>            
+        <li>学生への接触頻度向上（X・Instagramを活用した募集広報の実施）
+        </li>
+        <li>オンライン×オフラインでの周知を実施（ビラ配布・ポスター作成）
+        </li>
+        <li>応募導線の簡略化（Webページでの立候補受付・公式LINE導入）
+        </li>
+        </ul>
+        <p class="badge"> 
+        〇 総代交流会活動<br> 実施日：2025/05/14　参加者 <strong>27名</strong>
+        </p>
+        <p class="badge">
+        〇総代会<br> 実施日：2025/05/21　立候補者数 <strong>120名</strong><br>
+        終了後にオリジナル丼の試食会
+</div>
+
+<div class="result-card">
+     <p class="section-title">＜購買委員会＞</p>
+        <p>
+            〇アイスCUP企画<br>
+            コンビニアイスの人気投票 → 上位アイスをポイント付与販売　[期間] 5/12～6/13<br>
+        </p>
+        <p class="rank">
+            1位 御餅きなこもち　2位 BIGスイカバー　3位 ビスケットサンド
+        </p>
+        <p>
+            〇ひとことカード SNS掲載<br>
+            〇ひとことカード管理（回収・掲示）
+        <ul>
+        <li>学生の要望を定量・定性の両面から把握
+        </li>
+        <li>要望が実現した事例を
+        <strong>SNS（X／旧Twitter）で発信</strong>
+        制度の認知向上を図る
+        </li>
+        <li>回収・整理・掲示までを一貫して運用、学生の声が反映される仕組みづくりに貢献
+        </li>
+        </ul>
+</div>
+</section>
+
+    <section id="photos">
+        <h2>3．活動風景ギャラリー</h2>
+
+        <div class="slider-wrapper">
+            <button class="slide-btn prev">←</button>
+
+            <div class="slider">
+                <div class="slides">
+                    <img src="photo1.JPEG" alt="活動写真1">
+                    <img src="photo3.JPG" alt="活動写真2">
+                    <img src="LINE_ALBUM_250521総代会.jpg" alt="活動写真3">
+                    <img src="image-get-1.jpg" alt="活動写真4">
+                    <img src="IMG_0730.JPG" alt="活動写真5">
+                    <img src="LINE_ALBUM_20231216・17 父母説_251126_1.jpg" alt="活動写真6">
+                </div>
+            </div>
+
+            <button class="slide-btn next">→</button>
+        </div>
+    </section>
+
+</div>
+
+<footer class="footer">
+    <p>© 2025 Hiroki Uematsu</p>
+    <p>
+        <a href="mailto:s239014⭐︎toyaku.ac.jp">
+            s239014⭐︎toyaku.ac.jp（⭐︎→＠に変更）
+        </a>
+    </p>
+</footer>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".navbar a");
+  function activateMenu() {
+    let current = "";
+    sections.forEach(sec => {
+      const top = sec.offsetTop - 120; 
+      const bottom = top + sec.offsetHeight;
+      if (scrollY >= top && scrollY < bottom) {
+        current = sec.getAttribute("id");
+      }
+    });
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === `#${current}`) {
+        link.classList.add("active");
+      }
+    });
+  }
+  window.addEventListener("scroll", activateMenu);
+});
+</script>
+</body>
+</html>
